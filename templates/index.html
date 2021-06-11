@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <title>Currency Converter</title>
+</head>	
+    <body>
+	<h2>Demo JS requesting data to server and no reloading the web page.</h2>
+    <div>
+        <form id="form">
+            <input id="currency" autocomplete="off" autofocus placeholder="Currency" type="text">
+            <input type="submit" value="Get Exchange Rate">
+        </form>
+    </div>
+        <br>
+        <div id="result"></div><br />
+        <div id="about">
+            <p>
+                <b>Currencies:</b><br />
+                USD, AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BHD, BIF, BMD, BND, BOB, BRL, BSD, BTN,
+                BWP, BYN, BZD, CAD, CDF, CHF, CLP, CNY, COP, CRC ,CUC, CUP, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ERN, ETB, EUR ,FJD,
+                FKP, FOK, GBP, GEL, GGP, GHS, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, IMP, INR, IQD, IRR, ISK,
+                JMD, JOD, JPY, KES, KGS, KHR, KID, KMF, KRW, KWD, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LYD, MAD, MDL, MGA, MKD, MMK,
+                MNT, MOP, MRU, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, OMR, PAB, PEN, PGK, PHP, PKR, PLN, PYG,
+                QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SDG, SEK, SGD, SHP, SLL, SOS, SRD, SSP, STN, SYP, SZL, THB, TJS, TMT, TND,
+                TOP, TRY, TTD, TVD, TWD, TZS, UAH, UGX, UYU, UZS, VES, VND, VUV, WST, XAF, XCD, XDR, XOF, XPF, YER, ZAR, ZMW
+
+            </p>
+        </div>
+        <div id="about">
+            The app call the api https://www.exchangerate-api.com/ to get the exchange rates.<br />            
+        </div>
+        <footer class="text-center text-lg-start bg-light text-muted" style="position:fixed; bottom:0;left:0;width:100%;">
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                <img src="{{ url_for('static', filename='img/python-logo-64x64.png') }}" />
+                <img src="{{ url_for('static', filename='img/flask-logo-64x64.png') }}" />
+                <img src="{{ url_for('static', filename='img/html-logo-64x64.png') }}" />
+                <img src="{{ url_for('static', filename='img/js-logo-64x64.png') }}" />
+              </div>
+            <div>
+                2021 Copyright:
+                <a class="text-reset fw-bold" href="https://www.teopinillo.com/">teopinillo.com</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+    </body>
+</html>
